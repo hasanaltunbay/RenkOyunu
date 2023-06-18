@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:background="@drawable/renklerr"
+    android:orientation="vertical"
+    tools:context=".AnaFragment">
+
+    <TextView
+        android:id="@+id/app_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="RENK OYUNU"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        android:textColor="#1D35BF"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/white"
+        android:layout_marginStart="20dp"
+        app:cardElevation="10dp">
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hoşgeldiniz"
+                android:gravity="center"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="#363A43"/>
+
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/isim"
+                android:hint="Adnızı Giriniz"
+                android:textColor="#363A43"
+                android:textSize="20sp"
+                android:inputType="textPersonName">
+            </EditText>
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/baslaButon"
+                android:layout_margin="20dp"
+                android:layout_gravity="center"
+                android:text="Başla"/>
+
+
+
+
+        </LinearLayout>
+
+        
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
+</layout>

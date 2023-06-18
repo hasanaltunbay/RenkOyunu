@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/anaFragment">
+
+    <fragment
+        android:id="@+id/anaFragment"
+        android:name="com.hasanaltunbay.renkoyunu.AnaFragment"
+        android:label="AnaFragment" >
+        <action
+            android:id="@+id/action_anaFragment_to_oyunFragment"
+            app:destination="@id/oyunFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/oyunFragment"
+        android:name="com.hasanaltunbay.renkoyunu.OyunFragment"
+        android:label="OyunFragment" >
+        <action
+            android:id="@+id/action_oyunFragment_to_skorFragment"
+            app:destination="@id/skorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/skorFragment"
+        android:name="com.hasanaltunbay.renkoyunu.SkorFragment"
+        android:label="SkorFragment" >
+        <action
+            android:id="@+id/action_skorFragment_to_anaFragment"
+            app:destination="@id/anaFragment" />
+    </fragment>
+</navigation>
