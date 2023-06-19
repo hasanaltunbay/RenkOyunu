@@ -10,6 +10,7 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import com.hasanaltunbay.renkoyunu.databinding.FragmentAnaBinding
 
 
@@ -23,14 +24,19 @@ class AnaFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
+
 
         binding= DataBindingUtil.inflate(inflater,R.layout.fragment_ana,container,false)
 
         binding.baslaButon.setOnClickListener { view:View->
 
             if (binding.isim.text!!.isNotEmpty()){
-                view.findNavController().navigate(R.id.action_anaFragment_to_oyunFragment)
+
+                val action=AnaFragmentDirections.actionAnaFragmentToOyunFragment()
+                action.isim=binding.isim.text.toString()
+                findNavController().navigate(action)
+
+
             }else{
                 Toast.makeText(context,"Önce isminizi giriniz!",Toast.LENGTH_SHORT).show()
             }

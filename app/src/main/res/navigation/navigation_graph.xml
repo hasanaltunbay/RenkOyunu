@@ -19,6 +19,10 @@
         <action
             android:id="@+id/action_oyunFragment_to_skorFragment"
             app:destination="@id/skorFragment" />
+        <argument
+            android:name="isim"
+            app:argType="string"
+            android:defaultValue="isim" />
     </fragment>
     <fragment
         android:id="@+id/skorFragment"
@@ -26,6 +30,15 @@
         android:label="SkorFragment" >
         <action
             android:id="@+id/action_skorFragment_to_anaFragment"
-            app:destination="@id/anaFragment" />
+            app:destination="@id/anaFragment"
+            app:popUpTo="@id/anaFragment" />
+        <argument
+            android:name="skor"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="isim"
+            app:argType="string"
+            android:defaultValue="isim" />
     </fragment>
 </navigation>
